@@ -18,7 +18,13 @@ pessoas = ("Jozão", 28, "Mazia", 22, "Preto", 35)
 pessoas += ("Nana", 30)
 print(pessoas)
 
-# def ordenar_por_idade:
-for i in pessoas:
-    # print(i)
-    pessoas.sort()
+
+def ordenar_por_idade(pessoas):
+    return sorted(pessoas, key=lambda pessoa: pessoa[1])
+
+def filtrar_pessoas_jovens(pessoas):
+    pessoa_menor_que_trinta = [pessoa for pessoa in pessoas if pessoa[1] < 30]
+    print(pessoa_menor_que_trinta)
+    return pessoa_menor_que_trinta
+
+
